@@ -1,0 +1,43 @@
+<idea-plugin version="2">
+  <name>ReviewBoard Client</name>
+  <description>Client for ReviewBoard</description>
+  <version>0.1</version>
+  <category>Tool Integration</category>
+
+  <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Build+Number+Ranges for description -->
+  <idea-version since-build="107.105"/>
+
+  <application-components>
+    <!-- Add your application components here -->
+  </application-components>
+
+  <project-components>
+    <component>
+      <implementation-class>org.reviewboard.plugin.configuration.ClientConfiguration</implementation-class>
+    </component>
+    <component>
+      <interface-class>org.reviewboard.plugin.server.ReviewRequestOperations</interface-class>
+      <implementation-class>org.reviewboard.plugin.server.ReviewRequestOperationsImpl</implementation-class>
+    </component>
+    <component>
+      <implementation-class>org.reviewboard.plugin.reviews.CreateReviewRequestView</implementation-class>
+    </component>
+    <component>
+      <implementation-class>org.reviewboard.plugin.reviews.ExternalTools</implementation-class>
+    </component>
+    <component>
+      <implementation-class>org.reviewboard.plugin.reviews.CreateReviewRequestHelper</implementation-class>
+    </component>
+  </project-components>
+
+  <actions>
+    <action id="ReviewBoardClient.createReviewRequest" class="org.reviewboard.plugin.reviews.CreateReviewRequestAction"
+            text="Create Review Request..." icon="/reviewboard-small.png">
+      <add-to-group group-id="VersionControlsGroup" anchor="first"/>
+    </action>
+  </actions>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <projectConfigurable instance="org.reviewboard.plugin.configuration.ReviewBoardClientConfigurable"/>
+  </extensions>
+</idea-plugin>
