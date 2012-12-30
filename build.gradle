@@ -1,0 +1,29 @@
+subprojects {
+  apply plugin: 'java'
+
+  version = '0.1-SNAPSHOT'
+
+  repositories {
+    mavenCentral()
+  }
+
+  configurations {
+    provided
+  }
+  dependencies {
+    compile('commons-lang:commons-lang:2.5')
+    testCompile('org.testng:testng:6.8', 'org.easymock:easymock:3.1')
+    provided files(intellij11LibDir + "idea.jar",
+            intellij11LibDir + "openapi.jar",
+            intellij11LibDir + "util.jar",
+            intellij11LibDir + "jdom.jar",
+            intellij11LibDir + "extensions.jar",
+            intellij11LibDir + "annotations.jar")
+  }
+
+  sourceSets {
+    main.compileClasspath += configurations.provided
+    test.compileClasspath += configurations.provided
+    test.runtimeClasspath += configurations.provided
+  }
+}

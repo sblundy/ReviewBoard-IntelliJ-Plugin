@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ReviewBoardClientPlugin.iml" filepath="$PROJECT_DIR$/ReviewBoardClientPlugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/reviewboard-client-plugin/reviewboard-client-plugin.iml" filepath="$PROJECT_DIR$/reviewboard-client-plugin/reviewboard-client-plugin.iml" />
     </modules>
   </component>
 </project>
