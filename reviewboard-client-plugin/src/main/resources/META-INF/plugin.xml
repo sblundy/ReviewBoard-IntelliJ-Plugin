@@ -32,7 +32,7 @@
 
   <actions>
     <action id="ReviewBoardClient.createReviewRequest" class="org.reviewboard.plugin.reviews.CreateReviewRequestAction"
-            text="Create Review Request..." icon="/reviewboard-small.png">
+            icon="/reviewboard-logo.png">
       <add-to-group group-id="VersionControlsGroup" anchor="first"/>
     </action>
   </actions>

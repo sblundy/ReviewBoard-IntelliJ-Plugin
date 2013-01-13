@@ -15,6 +15,7 @@ subprojects {
     testCompile('org.testng:testng:6.8', 'org.easymock:easymock:3.1')
     provided files(intellij11LibDir + "idea.jar",
             intellij11LibDir + "openapi.jar",
+            intellij11LibDir + "forms_rt.jar",
             intellij11LibDir + "util.jar",
             intellij11LibDir + "jdom.jar",
             intellij11LibDir + "extensions.jar",

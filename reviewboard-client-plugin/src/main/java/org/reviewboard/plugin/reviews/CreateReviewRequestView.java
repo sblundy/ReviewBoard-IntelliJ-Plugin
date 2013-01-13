@@ -4,6 +4,7 @@ import com.intellij.openapi.components.AbstractProjectComponent;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.DialogBuilder;
 import com.intellij.openapi.ui.DialogWrapper;
+import org.reviewboard.plugin.ReviewBoardBundle;
 import org.reviewboard.plugin.configuration.ClientConfiguration;
 
 /**
@@ -20,7 +21,7 @@ public class CreateReviewRequestView extends AbstractProjectComponent {
         final DialogBuilder builder = new DialogBuilder(super.myProject);
         builder.addOkAction();
         builder.addCancelAction();
-        builder.setTitle("Create Draft Review");
+        builder.setTitle(ReviewBoardBundle.message("createRequest.view.title"));
         final CreateRequestFromChanges createRequestFromChanges = new CreateRequestFromChanges();
         createRequestFromChanges.setOpenInBrowser(config.isOpenNewReviewInBrowser());
         createRequestFromChanges.setBaseDir(config.getVcsBaseDir());

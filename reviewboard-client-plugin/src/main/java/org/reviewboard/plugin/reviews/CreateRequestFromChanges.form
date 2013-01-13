@@ -13,7 +13,7 @@
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Patch File Name"/>
+          <text resource-bundle="org/reviewboard/plugin/ReviewBoardBundle" key="createRequest.form.patchfilename"/>
         </properties>
       </component>
       <vspacer id="593eb">
@@ -34,7 +34,7 @@
           <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Open New Request In Browser"/>
+          <text resource-bundle="org/reviewboard/plugin/ReviewBoardBundle" key="createRequest.form.openinbrowser"/>
         </properties>
       </component>
       <component id="20d18" class="javax.swing.JLabel">
@@ -42,7 +42,7 @@
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="VCS Base Directory"/>
+          <text resource-bundle="org/reviewboard/plugin/ReviewBoardBundle" key="createRequest.form.vcsbasedir"/>
         </properties>
       </component>
       <component id="dae5" class="javax.swing.JTextField" binding="baseDir">

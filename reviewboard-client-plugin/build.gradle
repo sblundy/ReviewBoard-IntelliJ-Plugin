@@ -1,0 +1,16 @@
+apply plugin: IntelliJPluginDevPlugin
+apply plugin: UiDesignerPlugin
+
+dependencies {
+  compile project(":resources_en")
+}
+
+intellijPluginDev {
+  sandboxDir = intellijSandboxDir
+  pluginName = "ReviewBoard-IntelliJ-Plugin"
+  deployables = files(jar.archivePath) + configurations.runtime
+}
+
+uiDesigner {
+  intellijLibDir = intellij11LibDir
+}

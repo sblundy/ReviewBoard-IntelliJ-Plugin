@@ -1,1 +1,1 @@
-include "reviewboard-client-plugin"
+include "reviewboard-client-plugin", "resources_en"
