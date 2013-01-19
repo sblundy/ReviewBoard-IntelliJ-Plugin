@@ -16,6 +16,7 @@ Required Plugins:
 * QAPlug - PMD
 * TestNG-J
 * UI Designer
+* Gradle
 
 JDK:
 
@@ -31,7 +32,14 @@ Currently we're developing against version 11.1.3
     * It should be named 'IDEA-IU-117.798'
 1. Click Ok
 
-Global Libraries:
+Gradle:
 
-* org.testng:testng:6.8
-* org.easymock:easymock:3.1
+1. Make sure the Gradle Home is configured in the Gradle plugin Preferences screen
+    * File -> Preferences -> Gradle
+1. Create `$PROJECT_HOME/gradle.properties`
+1. Add `intellij11LibDir` property to gradle.properties
+    * Set the value of the property to the path of your IntelliJ 11 lib directory
+    * On a Mac, it'll probably be `/Applications/IntelliJ IDEA 11.app/lib/`
+    * On a PC, `c:\Program Files\Jetbrains\IntelliJ IDEA 11\lib\`
+1. Add `intellijSandboxDir` property to gradle.properties
+    * You can find the value in File -> Project Structure -> SDKs -> IDEA-IU-117.798 -> Sandbox Home
